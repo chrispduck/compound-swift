@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ProfileView: View {
     let user: User
-
+    
     var body: some View {
         List {
             Section(header: ProfileHeader(picture: user.picture)) {
@@ -13,5 +13,10 @@ struct ProfileView: View {
                 ProfileCell(key: "Updated at", value: user.updatedAt)
             }
         }
+    }
+}
+struct ProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileView(user: example_user )
     }
 }

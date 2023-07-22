@@ -7,8 +7,18 @@ struct MainView: View {
     var body: some View {
         if let user = self.user {
             VStack {
-                ProfileView(user: user)
+//                HomeView(user: user)
+//                ProfileView(user: user)
                 Button("Logout", action: self.logout)
+                TabView {
+                    NavBarView(user:user)
+//                    ProfileView(user: user)
+//                        .tabItem {
+//                           Image(systemName: "person")
+//                           Text("Profile")
+//                       }
+                }
+                
             }
         } else {
             VStack {
@@ -44,5 +54,12 @@ extension MainView {
                     print("Failed with: \(error)")
                 }
             }
+    }
+}
+
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
     }
 }

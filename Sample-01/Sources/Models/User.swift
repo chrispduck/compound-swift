@@ -28,3 +28,5 @@ extension User {
         self.updatedAt = updatedAt
     }
 }
+
+var example_user = User(id: "123", name: "chris", email: "cj@hotmail.com", emailVerified: "true", picture: "here", updatedAt: "yeseterday")

@@ -8,10 +8,10 @@ struct HeroView: View {
         Image("Auth0")
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width: 25, height: 28, alignment: .center)
+            .frame(width: 20, height: 28, alignment: .center)
             .padding(.top, 8)
-        VStack(alignment: .leading, spacing: -32) {
-            Text("Swift")
+        VStack(alignment: .leading, spacing: -20) {
+            Text("Compound")
                 .tracking(self.tracking)
                 .foregroundStyle(
                     .linearGradient(
@@ -19,9 +19,11 @@ struct HeroView: View {
                       startPoint: .topLeading,
                       endPoint: .bottomTrailing
                     ))
-            Text("Sample")
-                .tracking(self.tracking)
-            Text("App")
+//            Spacer()
+//              .frame(height: 20)
+//            Text("Sample")
+//                .tracking(self.tracking)
+            Text("Demo App.")
                 .tracking(self.tracking)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -90,5 +92,12 @@ struct PrimaryButtonStyle: ButtonStyle {
             .background(Color.black)
             .foregroundColor(.white)
             .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+}
+
+
+struct HeroView_Previews: PreviewProvider {
+    static var previews: some View {
+        HeroView()
     }
 }
