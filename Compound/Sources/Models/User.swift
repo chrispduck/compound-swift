@@ -29,4 +29,4 @@ extension User {
     }
 }
 
-var example_user = User(id: "123", name: "chris", email: "cj@hotmail.com", emailVerified: "true", picture: "here", updatedAt: "yeseterday")
+var example_user = User(id: "123", name: "Chris Parsons", email: "cj@hotmail.com", emailVerified: "true", picture: "https://headshots-inc.com/wp-content/uploads/2021/01/FINAL-Blog-Images.jpg", updatedAt: "yeseterday")

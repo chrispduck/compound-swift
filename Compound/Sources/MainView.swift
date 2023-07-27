@@ -7,16 +7,8 @@ struct MainView: View {
     var body: some View {
         if let user = self.user {
             VStack {
-//                HomeView(user: user)
-//                ProfileView(user: user)
-                Button("Logout", action: self.logout)
                 TabView {
-                    NavBarView(user:user)
-//                    ProfileView(user: user)
-//                        .tabItem {
-//                           Image(systemName: "person")
-//                           Text("Profile")
-//                       }
+                    	NavBarView(user:user)
                 }
                 
             }
@@ -59,6 +51,12 @@ extension MainView {
 
 
 struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
+
+struct Home_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
     }
